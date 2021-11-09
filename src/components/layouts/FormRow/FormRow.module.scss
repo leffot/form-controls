@@ -1,0 +1,49 @@
+$screenSizeMap: (
+    small: 551px,
+    medium: 801px,
+    large: 1040px,
+    xl: 1200px,
+    xxl: 1261px,
+);
+
+@function screenSize($key) {
+    @if map-has-key($screenSizeMap, $key) {
+        @return map-get($screenSizeMap, $key);
+    }
+
+    @warn "Unknown `#{$key}` in $screenSizeMap.";
+    @return null;
+}
+
+@mixin breakpoint($size) {
+    @media (min-width: screenSize($size)) {
+        @content;
+    }
+}
+
+.formRow {
+    margin-bottom: var(--spacing-two-thirds);
+    width: 100%;
+}
+
+%formRowGrid {
+    display: grid;
+    grid-gap: var(--spacing-half);
+    grid-template-columns: 1fr;
+}
+
+.formRowHalf {
+    @extend %formRowGrid;
+
+    @include breakpoint('small') {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.formRowThird {
+    @extend %formRowGrid;
+
+    @include breakpoint('small') {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

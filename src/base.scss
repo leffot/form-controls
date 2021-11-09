@@ -1,0 +1,66 @@
+// :root {
+//     --box-shadow-input: 0 1px 0 1px rgba(0, 0, 0, 0.04);
+//     --color-white: #ffffff;
+//     --color-lightest-grey: #f1f1f1;
+//     --color-light-grey: #e1e1e1;
+//     --color-medium-grey: #979797;
+//     --color-dark-grey: #545454;
+//     --color-not-black: #222222;
+//     --color-red: #c11;
+//     --color-primary: #947000;
+//     --font-sans: proxima-nova, 'Proxima Nova', Helvetica, Arial, sans-serif;
+//     --font-size-base: 1rem;
+//     --font-size-medium: 20px;
+//     --font-size-normal: 16px;
+//     --font-weight-sans-normal: 400;
+//     --font-weight-sans-medium: 500;
+//     --spacing-triple: 4.5rem;
+//     --spacing-double: 3rem;
+//     --spacing-single: 1.5rem;
+//     --spacing-two-thirds: 1rem;
+//     --spacing-half: 0.75rem;
+//     --spacing-third: 0.5rem;
+//     --spacing-quarter: 0.375rem;
+//     --spacing-sixth: 0.25rem;
+//     --spacing-eighth: 0.1875rem;
+// }
+//
+// fieldset,
+// form,
+// label,
+// legend {
+//     border: 0;
+//     box-sizing: border-box;
+//     font-size: 100%;
+//     margin: 0;
+//     padding: 0;
+//     vertical-align: baseline;
+// }
+//
+// body {
+//     color: var(--color-not-black);
+//     font-family: var(--font-sans);
+//     font-variant-ligatures: common-ligatures;
+//     font-variant-numeric: oldstyle-nums;
+//     font-feature-settings: 'liga', 'onum';
+//     line-height: 1.5;
+//     -moz-osx-font-smoothing: grayscale;
+//     -webkit-font-smoothing: antialiased;
+// }
+//
+// input,
+// textarea {
+//     box-sizing: border-box;
+//     font-family: var(--font-sans);
+// }
+//
+// :global(.visuallyHidden) {
+//     border: 0;
+//     clip: rect(0 0 0 0);
+//     height: 1px;
+//     margin: -1px;
+//     overflow: hidden;
+//     padding: 0;
+//     position: absolute;
+//     width: 1px;
+// }

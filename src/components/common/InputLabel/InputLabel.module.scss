@@ -1,0 +1,9 @@
+.label {
+    display: block;
+    font-weight: var(--font-weight-sans-medium);
+    margin-bottom: var(--spacing-quarter);
+
+    &.large {
+        font-size: var(--font-size-medium);
+    }
+}

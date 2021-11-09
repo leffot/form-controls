@@ -1,0 +1,7 @@
+@import '../controls.scss';
+
+.input {
+    @extend %inputBase;
+    padding: var(--spacing-third) var(--spacing-half);
+    width: 100%;
+}
