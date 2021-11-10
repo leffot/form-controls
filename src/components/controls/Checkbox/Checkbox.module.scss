@@ -3,6 +3,8 @@
 %checkboxBase {
     cursor: pointer;
     display: inline-block;
+    font-family: var(--font-sans);
+    line-height: 1.5;
     padding: var(--spacing-eighth) 0 var(--spacing-eighth) 1.875rem;
     position: relative;
     vertical-align: baseline;
@@ -19,6 +21,7 @@
     &::before {
         @extend %inputBase;
         background-color: var(--color-white);
+        box-sizing: content-box;
         height: var(--spacing-two-thirds);
         left: 0;
         margin-right: 0.875rem;

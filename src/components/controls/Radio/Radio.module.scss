@@ -3,6 +3,8 @@
 .regular {
     cursor: pointer;
     display: block;
+    font-family: var(--font-sans);
+    line-height: 1.5;
     padding-left: var(--spacing-single);
     position: relative;
 
@@ -26,6 +28,7 @@
     &::before {
         @extend %inputBase;
         background-color: var(--color-white);
+        box-sizing: content-box;
         height: var(--spacing-two-thirds);
         left: 0;
         margin-right: var(--spacing-third);

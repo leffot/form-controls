@@ -29,7 +29,6 @@ export default {
         postcss({
             extract: false,
             minimize: true,
-            modules: true,
             plugins: [autoprefixer()],
             use: ['sass'],
         }),
