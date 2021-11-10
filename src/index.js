@@ -4,7 +4,6 @@ export { InputLabel, ValidationError } from './components/common'
 export {
     Checkbox,
     Radio,
-    Recaptcha,
     Select,
     Textarea,
     TextInput,

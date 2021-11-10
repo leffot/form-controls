@@ -7,7 +7,6 @@ import {
     FormRow,
     InputLabel,
     Radio,
-    Recaptcha,
     Select,
     Textarea,
     TextInput,
@@ -37,7 +36,6 @@ export default function App() {
         green: '',
         blue: '',
         textarea: '',
-        recaptcha: '',
     }
 
     const validationSchema = Yup.object({
@@ -65,7 +63,6 @@ export default function App() {
         green: Yup.string(),
         blue: Yup.string(),
         textarea: Yup.string(),
-        recaptcha: Yup.string().required(REQUIRED),
     })
 
     const createUUID = () => {
@@ -234,13 +231,6 @@ export default function App() {
                                 id='textarea'
                                 name='textarea'
                                 placeholder='A long string of text, maybe several paragraphs...'
-                            />
-                        </FormRow>
-                        <FormRow>
-                            <InputLabel label='reCAPTCHA' />
-                            <Recaptcha
-                                name='recaptcha'
-                                sitekey={process.env.REACT_APP_SITEKEY}
                             />
                         </FormRow>
                         <FormRow>
