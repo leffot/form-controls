@@ -26,6 +26,10 @@ $screenSizeMap: (
     width: 100%;
 }
 
+.formRowFlex {
+    display: flex;
+}
+
 %formRowGrid {
     display: grid;
     grid-gap: var(--spacing-half);

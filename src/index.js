@@ -8,4 +8,4 @@ export {
     Textarea,
     TextInput,
 } from './components/controls'
-export { Fieldset, FormRow } from './components/layouts'
+export { Fieldset, FlexField, FormRow } from './components/layouts'

@@ -5,6 +5,7 @@ import styles from './FormRow.module.scss'
 
 export default function FormRow({ children, style }) {
     const className = cn(styles.formRow, {
+        [styles.formRowFlex]: style === 'flex',
         [styles.formRowHalf]: style === 'half',
         [styles.formRowThird]: style === 'third',
     })
