@@ -35,7 +35,7 @@ export default function Select({
         ) : null
 
     const handleSelectChange = event => {
-        onChange(event.target.value)
+        onChange(event)
         handleChange(event)
     }
 
