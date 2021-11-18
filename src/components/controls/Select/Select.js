@@ -10,6 +10,7 @@ export default function Select({
     hideLabel,
     id,
     label,
+    multiple,
     name,
     onChange,
     options,
@@ -38,16 +39,20 @@ export default function Select({
         handleChange(event)
     }
 
+    const className = cn(styles.select, {
+        [styles.multiple]: multiple,
+        [styles.errorBorder]: meta.touched && meta.error,
+    })
+
     return (
         <>
             <InputLabel id={id} isVisuallyHidden={hideLabel} label={label} />
             <select
                 {...field}
                 id={id}
+                multiple={multiple}
                 onChange={handleSelectChange}
-                className={cn(styles.select, {
-                    [styles.errorBorder]: meta.touched && meta.error,
-                })}
+                className={className}
             >
                 {placeholderEl}
                 {options}
@@ -66,6 +71,7 @@ Select.propTypes = {
     hideLabel: PropTypes.bool,
     id: PropTypes.string,
     label: PropTypes.string,
+    multiple: PropTypes.bool,
     name: PropTypes.string,
     onChange: PropTypes.func,
     options: PropTypes.array,

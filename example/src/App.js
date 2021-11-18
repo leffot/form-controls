@@ -50,6 +50,7 @@ export default function App() {
         select: Yup.string()
             .required(REQUIRED)
             .notOneOf([SELECT_PLACEHOLDER], REQUIRED),
+        multi_select: Yup.array().of(Yup.string()),
         checkbox: Yup.object({
             events: Yup.string(),
             newReleases: Yup.string(),
@@ -175,6 +176,16 @@ export default function App() {
                                 name='select'
                                 options={selectOptions}
                                 placeholder={SELECT_PLACEHOLDER}
+                            />
+                        </FormRow>
+                        <FormRow>
+                            <Select
+                                hideLabel={false}
+                                id='multi_select'
+                                label='Select (Multiple)'
+                                multiple={true}
+                                name='multi_select'
+                                options={selectOptions}
                             />
                         </FormRow>
                         <Fieldset>
