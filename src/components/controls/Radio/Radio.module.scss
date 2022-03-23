@@ -56,6 +56,49 @@
     position: relative;
 }
 
+.swatch {
+    @extend %rectangleInput;
+    font-size: 0;
+    max-width: 100px;
+    padding: 1px;
+    position: relative;
+
+    :global(.swatch-label) {
+        display: inline-block;
+        opacity: 0;
+    }
+
+    &:hover {
+        :global(.swatch-label) {
+            background-color: var(--color-lightest-grey);
+            border: 1px solid var(--color-light-grey);
+            bottom: -45px;
+            box-shadow: 0 0 10px 0 rgb(13, 13, 13, 0.15);
+            font-size: var(--font-size-base);
+            left: 0;
+            padding: var(--spacing-eighth) var(--spacing-third);
+            position: absolute;
+            opacity: 1;
+            white-space: nowrap;
+            z-index: 5;
+
+            &::before {
+                background-color: var(--color-lightest-grey);
+                border-left: 1px solid var(--color-light-grey);
+                border-top: 1px solid var(--color-light-grey);
+                content: '';
+                display: inline-block;
+                height: 10px;
+                left: 10px;
+                position: absolute;
+                top: -6px;
+                transform: rotate(45deg);
+                width: 10px;
+            }
+        }
+    }
+}
+
 .disabled {
     background-color: var(--color-lightest-grey);
     color: var(--color-dark-grey);

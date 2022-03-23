@@ -15,11 +15,14 @@ export default function Radio({
     value,
 }) {
     const isRectangleRadio = style === 'rectangle'
+    const isSwatch = style === 'swatch'
 
     const labelStyles = cn({
-        [styles.regular]: !isRectangleRadio,
+        [styles.regular]: !isRectangleRadio && !isSwatch,
         [styles.rectangle]: isRectangleRadio,
-        [styles.disabled]: disabled,
+        [styles.disabled]: (isRectangleRadio || isSwatch) && disabled,
+        [styles.swatch]: isSwatch,
+        [styles.swatchDisabled]: isSwatch && disabled,
     })
 
     const [field, meta] = useField({

@@ -5,6 +5,8 @@ export {
     Checkbox,
     Radio,
     Select,
+    SwatchColor,
+    SwatchImage,
     Textarea,
     TextInput,
 } from './components/controls'

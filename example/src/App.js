@@ -8,6 +8,8 @@ import {
     InputLabel,
     Radio,
     Select,
+    SwatchColor,
+    SwatchImage,
     Textarea,
     TextInput,
 } from 'form-controls'
@@ -127,6 +129,7 @@ export default function App() {
                                     value='Two'
                                 />
                                 <Radio
+                                    disabled={true}
                                     id='radio-three'
                                     label='Three'
                                     name='radio'
@@ -165,6 +168,77 @@ export default function App() {
                                     name='radioRectangle'
                                     style='rectangle'
                                     value='Norman Vilalta'
+                                />
+                            </FormRow>
+                        </Fieldset>
+                        <Fieldset>
+                            <InputLabel label='Swatch Radio' />
+                            <FormRow style='half'>
+                                <Radio
+                                    id='radioSwatch-one'
+                                    label={
+                                        <>
+                                            <SwatchColor
+                                                hues={['000', 'a6a6a6']}
+                                            />
+                                            <div className='swatch-label'>
+                                                Black and Grey
+                                            </div>
+                                        </>
+                                    }
+                                    name='radioSwatch'
+                                    style='swatch'
+                                    value='Black and Grey'
+                                />
+                                <Radio
+                                    disabled={true}
+                                    id='radioSwatch-two'
+                                    label={
+                                        <>
+                                            <SwatchColor hues={['c11']} />
+                                            <div className='swatch-label'>
+                                                Red
+                                            </div>
+                                        </>
+                                    }
+                                    name='radioSwatch'
+                                    style='swatch'
+                                    value='Red'
+                                />
+                                <Radio
+                                    disabled={true}
+                                    id='radioSwatch-three'
+                                    label={
+                                        <>
+                                            <SwatchImage
+                                                url='/logo512.png'
+                                                label='React'
+                                            />
+                                            <div className='swatch-label'>
+                                                React
+                                            </div>
+                                        </>
+                                    }
+                                    name='radioSwatch'
+                                    style='swatch'
+                                    value='React'
+                                />
+                                <Radio
+                                    id='radioSwatch-four'
+                                    label={
+                                        <>
+                                            <SwatchImage
+                                                url='/logo512.png'
+                                                label='React 2'
+                                            />
+                                            <div className='swatch-label'>
+                                                React 2
+                                            </div>
+                                        </>
+                                    }
+                                    name='radioSwatch'
+                                    style='swatch'
+                                    value='React 2'
                                 />
                             </FormRow>
                         </Fieldset>
