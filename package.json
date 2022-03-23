@@ -1,63 +1,63 @@
 {
-    "name": "@leffot/form-controls",
-    "version": "1.2.1",
-    "description": "A library of React components to use with Formik forms.",
-    "author": "leffot",
-    "license": "MIT",
-    "repository": "leffot/form-controls",
-    "main": "dist/index.cjs.js",
-    "module": "dist/index.esm.js",
-    "source": "src/index.js",
-    "files": [
-        "dist"
+  "name": "@leffot/form-controls",
+  "version": "1.3.0",
+  "description": "A library of React components to use with Formik forms.",
+  "author": "leffot",
+  "license": "MIT",
+  "repository": "leffot/form-controls",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "source": "src/index.js",
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "classnames": "^2.3.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.8",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "@rollup/plugin-babel": "^5.3.1",
+    "@rollup/plugin-commonjs": "^21.0.2",
+    "@rollup/plugin-node-resolve": "^13.1.3",
+    "autoprefixer": "^10.4.4",
+    "eslint": "^8.11.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-react": "^7.29.4",
+    "postcss": "^8.4.12",
+    "rollup": "^2.70.1",
+    "rollup-plugin-delete": "^2.0.0",
+    "rollup-plugin-local-resolve": "^1.0.7",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-terser": "^7.0.2",
+    "sass": "^1.49.9",
+    "yup": "^0.32.11"
+  },
+  "peerDependencies": {
+    "formik": "^2.2.9",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "start": "rollup -c -w",
+    "lint": "eslint ./src"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
     ],
-    "dependencies": {
-        "classnames": "^2.3.1"
-    },
-    "devDependencies": {
-        "@babel/cli": "^7.17.6",
-        "@babel/core": "^7.17.8",
-        "@babel/preset-env": "^7.16.11",
-        "@babel/preset-react": "^7.16.7",
-        "@rollup/plugin-babel": "^5.3.1",
-        "@rollup/plugin-commonjs": "^21.0.2",
-        "@rollup/plugin-node-resolve": "^13.1.3",
-        "autoprefixer": "^10.4.4",
-        "eslint": "^8.11.0",
-        "eslint-config-prettier": "^8.5.0",
-        "eslint-plugin-jsx-a11y": "^6.5.1",
-        "eslint-plugin-node": "^11.1.0",
-        "eslint-plugin-react": "^7.29.4",
-        "postcss": "^8.4.12",
-        "rollup": "^2.70.1",
-        "rollup-plugin-delete": "^2.0.0",
-        "rollup-plugin-local-resolve": "^1.0.7",
-        "rollup-plugin-peer-deps-external": "^2.2.4",
-        "rollup-plugin-postcss": "^4.0.2",
-        "rollup-plugin-terser": "^7.0.2",
-        "sass": "^1.49.9",
-        "yup": "^0.32.11"
-    },
-    "peerDependencies": {
-        "formik": "^2.2.9",
-        "react": "^17.0.2",
-        "react-dom": "^17.0.2"
-    },
-    "scripts": {
-        "build": "rollup -c",
-        "start": "rollup -c -w",
-        "lint": "eslint ./src"
-    },
-    "browserslist": {
-        "production": [
-            ">0.2%",
-            "not dead",
-            "not op_mini all"
-        ],
-        "development": [
-            "last 1 chrome version",
-            "last 1 firefox version",
-            "last 1 safari version"
-        ]
-    }
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
