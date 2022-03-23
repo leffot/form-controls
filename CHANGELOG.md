@@ -6,7 +6,7 @@
 
 # v1.2.1
 
--   Update <Select> onChange function
+-   Update `<Select>` onChange function
 
 # v1.2.0
 
