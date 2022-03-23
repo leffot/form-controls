@@ -179,7 +179,7 @@ export default function App() {
                                     label={
                                         <>
                                             <SwatchColor
-                                                hues={['000', 'a6a6a6']}
+                                                hues={['#000', '#a6a6a6']}
                                             />
                                             <div className='swatch-label'>
                                                 Black and Grey
@@ -195,7 +195,7 @@ export default function App() {
                                     id='radioSwatch-two'
                                     label={
                                         <>
-                                            <SwatchColor hues={['c11']} />
+                                            <SwatchColor hues={['#c11']} />
                                             <div className='swatch-label'>
                                                 Red
                                             </div>

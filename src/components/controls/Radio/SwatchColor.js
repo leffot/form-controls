@@ -7,7 +7,7 @@ export default function SwatchColor({ hues }) {
         colorSwatches.push(
             <span
                 className={styles.swatch}
-                style={{ backgroundColor: `#${color}` }}
+                style={{ backgroundColor: color }}
                 key={index}
             />
         )
