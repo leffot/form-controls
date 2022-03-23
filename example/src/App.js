@@ -189,7 +189,7 @@ export default function App() {
                             />
                         </FormRow>
                         <Fieldset>
-                            <InputLabel label='Checkbox' />
+                            <InputLabel element='div' label='Checkbox' />
                             <FormRow>
                                 <Checkbox name='checkbox.events'>
                                     Events
