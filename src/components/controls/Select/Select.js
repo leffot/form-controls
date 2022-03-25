@@ -7,6 +7,7 @@ import { InputLabel, ValidationError } from '../../common'
 import styles from './Select.module.scss'
 
 export default function Select({
+    disabled,
     hideLabel,
     id,
     label,
@@ -42,6 +43,7 @@ export default function Select({
     const className = cn(styles.select, {
         [styles.multiple]: multiple,
         [styles.errorBorder]: meta.touched && meta.error,
+        [styles.disabled]: disabled,
     })
 
     return (
@@ -49,6 +51,7 @@ export default function Select({
             <InputLabel id={id} isVisuallyHidden={hideLabel} label={label} />
             <select
                 {...field}
+                disabled={disabled}
                 id={id}
                 multiple={multiple}
                 onChange={handleSelectChange}
@@ -68,6 +71,7 @@ Select.defaultProps = {
 }
 
 Select.propTypes = {
+    disabled: PropTypes.bool,
     hideLabel: PropTypes.bool,
     id: PropTypes.string,
     label: PropTypes.string,

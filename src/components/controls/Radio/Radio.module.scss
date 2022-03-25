@@ -64,6 +64,7 @@
     position: relative;
 
     :global(.swatch-label) {
+        color: var(--color-not-black);
         display: inline-block;
         opacity: 0;
     }
@@ -76,7 +77,7 @@
             box-shadow: 0 0 10px 0 rgb(13, 13, 13, 0.15);
             font-size: var(--font-size-base);
             left: 0;
-            padding: var(--spacing-eighth) var(--spacing-third);
+            padding: var(--spacing-quarter) var(--spacing-third);
             position: absolute;
             opacity: 1;
             white-space: nowrap;
@@ -100,10 +101,7 @@
 }
 
 .disabled {
-    background-color: var(--color-lightest-grey);
-    color: var(--color-dark-grey);
-    cursor: not-allowed;
-    pointer-events: none;
+    @extend %disabled;
 
     &::before {
         background: linear-gradient(
@@ -121,4 +119,23 @@
         right: 0;
         top: 0;
     }
+}
+
+.classicDisabled {
+    color: var(--color-disabled);
+    cursor: not-allowed;
+
+    &:hover::before {
+        border-color: var(--color-light-grey);
+    }
+}
+
+.swatchDisabled::after {
+    background-color: rgb(200, 200, 200, 0.75);
+    bottom: 0;
+    content: '';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
 }

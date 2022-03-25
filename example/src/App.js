@@ -80,8 +80,10 @@ export default function App() {
     const selectOptions = []
     for (let i = 0; i < 10; i++) {
         const UUID = createUUID()
+        const disabled = i === 4
+
         selectOptions.push(
-            <option value={UUID} key={i}>
+            <option value={UUID} key={i} disabled={disabled}>
                 {UUID}
             </option>
         )
@@ -102,6 +104,15 @@ export default function App() {
                                 label='Text Input'
                                 name='textInput'
                                 placeholder='A string of text'
+                            />
+                        </FormRow>
+                        <FormRow>
+                            <TextInput
+                                disabled={true}
+                                id='disabledTextInput'
+                                label='Disabled Text Input'
+                                name='disabledTextInput'
+                                placeholder='Another string of text'
                             />
                         </FormRow>
                         <FormRow>
@@ -254,6 +265,17 @@ export default function App() {
                         </FormRow>
                         <FormRow>
                             <Select
+                                disabled={true}
+                                hideLabel={false}
+                                id='select'
+                                label='Disabled Select'
+                                name='select'
+                                options={selectOptions}
+                                placeholder={SELECT_PLACEHOLDER}
+                            />
+                        </FormRow>
+                        <FormRow>
+                            <Select
                                 hideLabel={false}
                                 id='multi_select'
                                 label='Select (Multiple)'
@@ -270,6 +292,12 @@ export default function App() {
                                 </Checkbox>
                                 <Checkbox name='checkbox.newReleases'>
                                     New Releases
+                                </Checkbox>
+                                <Checkbox
+                                    disabled={true}
+                                    name='checkbox.disabledTest'
+                                >
+                                    Disabled Checkox
                                 </Checkbox>
                             </FormRow>
                         </Fieldset>
@@ -289,6 +317,7 @@ export default function App() {
                                     Boot
                                 </Checkbox>
                                 <Checkbox
+                                    disabled={true}
                                     name='checkboxRectangle.loafer'
                                     style='rectangle'
                                 >
@@ -305,17 +334,30 @@ export default function App() {
                                 <Checkbox name='green' style='Color Checkbox'>
                                     Green
                                 </Checkbox>
-                                <Checkbox name='blue' style='Color Checkbox'>
+                                <Checkbox
+                                    disabled={true}
+                                    name='blue'
+                                    style='Color Checkbox'
+                                >
                                     Blue
                                 </Checkbox>
                             </FormRow>
                         </Fieldset>
                         <FormRow>
                             <Textarea
-                                label='Textarea'
                                 id='textarea'
+                                label='Textarea'
                                 name='textarea'
                                 placeholder='A long string of text, maybe several paragraphs...'
+                            />
+                        </FormRow>
+                        <FormRow>
+                            <Textarea
+                                disabled={true}
+                                id='disabledTextarea'
+                                label='Disabled Textarea'
+                                name='disabledTextarea'
+                                placeholder='A long, disabled string of text, maybe several paragraphs...'
                             />
                         </FormRow>
                         <FormRow>

@@ -62,6 +62,10 @@
 
 .rectangle {
     @extend %rectangleInput;
+
+    &.disabled:hover {
+        border-color: var(--color-light-grey);
+    }
 }
 
 .color {
@@ -124,5 +128,14 @@
 
     &.filter-color-white::after {
         background-color: var(--color-white);
+    }
+}
+
+.disabled {
+    color: var(--color-disabled);
+    cursor: not-allowed;
+
+    &:hover::before {
+        border-color: var(--color-light-grey);
     }
 }

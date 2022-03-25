@@ -18,6 +18,11 @@
 
     option {
         font-weight: var(--font-weight-sans-normal);
+
+        &:disabled {
+            color: var(--color-disabled);
+            cursor: not-allowed;
+        }
     }
 
     &.multiple {
@@ -28,5 +33,9 @@
         option {
             padding: var(--spacing-sixth);
         }
+    }
+
+    &.disabled {
+        @extend %disabled;
     }
 }

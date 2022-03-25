@@ -12,7 +12,6 @@
     border-radius: 2px;
     box-shadow: var(--box-shadow-input);
     box-sizing: border-box;
-    color: var(--color-dark-grey);
     display: block;
     font-size: var(--font-size-normal);
     font-family: var(--font-sans);
@@ -29,6 +28,10 @@
 
     &:focus {
         @extend %inputFocus;
+        color: var(--color-not-black);
+    }
+
+    &::placeholder {
         color: var(--color-not-black);
     }
 
@@ -55,5 +58,15 @@
 
     input:focus + & {
         @extend %inputFocus;
+    }
+}
+
+%disabled {
+    background-color: var(--color-lightest-grey);
+    color: var(--color-disabled);
+    cursor: not-allowed;
+
+    &:hover {
+        border-color: var(--color-light-grey);
     }
 }

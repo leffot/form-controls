@@ -5,7 +5,13 @@ import cn from 'classnames'
 import { InputLabel, ValidationError } from '../../common'
 import styles from './TextInput.module.scss'
 
-export default function TextInput({ hideLabel, label, labelChild, ...props }) {
+export default function TextInput({
+    disabled,
+    hideLabel,
+    label,
+    labelChild,
+    ...props
+}) {
     const [field, meta] = useField(props)
 
     return (
@@ -16,9 +22,11 @@ export default function TextInput({ hideLabel, label, labelChild, ...props }) {
             <input
                 {...field}
                 {...props}
+                disabled={disabled}
                 id={props.id || props.name}
                 className={cn(styles.input, {
                     [styles.errorBorder]: meta.touched && meta.error,
+                    [styles.disabled]: disabled,
                 })}
             />
             <ValidationError meta={meta} />
@@ -31,6 +39,7 @@ TextInput.defaultProps = {
 }
 
 TextInput.propTypes = {
+    disabled: PropTypes.bool,
     hideLabel: PropTypes.bool,
     id: PropTypes.string,
     label: PropTypes.string,

@@ -19,6 +19,7 @@ export default function Radio({
 
     const labelStyles = cn({
         [styles.regular]: !isRectangleRadio && !isSwatch,
+        [styles.classicDisabled]: !isRectangleRadio && !isSwatch && disabled,
         [styles.rectangle]: isRectangleRadio,
         [styles.disabled]: (isRectangleRadio || isSwatch) && disabled,
         [styles.swatch]: isSwatch,
@@ -36,6 +37,7 @@ export default function Radio({
             <input
                 {...field}
                 className='visuallyHidden'
+                disabled={disabled}
                 id={id}
                 onClick={onClick}
                 type='radio'

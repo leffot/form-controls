@@ -5,7 +5,7 @@ import cn from 'classnames'
 import { ValidationError } from '../../common'
 import styles from './Checkbox.module.scss'
 
-export default function Checkbox({ children, name, onClick, style }) {
+export default function Checkbox({ children, disabled, name, onClick, style }) {
     const isRectangleCheckbox = style === 'rectangle'
     const isColorCheckbox = style === 'Color Checkbox'
     const colorClassName = `filter-color-${name.toLowerCase()}`
@@ -15,6 +15,7 @@ export default function Checkbox({ children, name, onClick, style }) {
         [styles.rectangle]: isRectangleCheckbox,
         [styles.color]: isColorCheckbox,
         [styles[colorClassName]]: isColorCheckbox,
+        [styles.disabled]: disabled,
     })
 
     const [field, meta] = useField({
@@ -27,6 +28,7 @@ export default function Checkbox({ children, name, onClick, style }) {
             <input
                 {...field}
                 className='visuallyHidden'
+                disabled={disabled}
                 id={name}
                 onClick={onClick}
                 type='checkbox'
@@ -45,6 +47,7 @@ Checkbox.defaultProps = {
 
 Checkbox.propTypes = {
     children: PropTypes.node,
+    disabled: PropTypes.bool,
     name: PropTypes.string,
     onClick: PropTypes.func,
     style: PropTypes.string,
