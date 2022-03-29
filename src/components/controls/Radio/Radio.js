@@ -11,6 +11,7 @@ export default function Radio({
     label,
     name,
     onClick,
+    showError,
     style,
     value,
 }) {
@@ -45,13 +46,14 @@ export default function Radio({
             <label htmlFor={id} className={labelStyles}>
                 {label}
             </label>
-            {!isRectangleRadio && <ValidationError meta={meta} />}
+            {showError && <ValidationError meta={meta} />}
         </>
     )
 }
 
 Radio.defaultProps = {
     disabled: false,
+    showError: false,
     style: 'regular',
 }
 
@@ -61,6 +63,7 @@ Radio.propTypes = {
     label: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
     name: PropTypes.string,
     onClick: PropTypes.func,
+    showError: PropTypes.bool,
     style: PropTypes.string,
     value: PropTypes.string,
 }
