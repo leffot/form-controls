@@ -1,6 +1,6 @@
 {
   "name": "@leffot/form-controls",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "A library of React components to use with Formik forms.",
   "author": "leffot",
   "license": "MIT",
